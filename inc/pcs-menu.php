@@ -27,7 +27,7 @@ function fn_pcs_menu()
 			endif;
 		?>
 		<h3 class="pcs-ttl">
-			You can use your custome layout use below function in functions.php<br/><br/>function pcs_get_custom_post_output($atts){
+			You can use your custom layout use below function in functions.php<br/><br/>function pcs_get_custom_post_output($atts){
 
 			}
 		</h3>
