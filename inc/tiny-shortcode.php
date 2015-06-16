@@ -53,7 +53,7 @@ function pcs_get_all_category($post_type="post"){
 						'pad_counts'               => false 
 		        	);
 
-			    $aCategory[] =  get_categories( $args );
+			    $aCategory[$tax] =  get_categories( $args );
 		     }
 		}
 	return $aCategory;

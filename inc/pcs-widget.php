@@ -2,6 +2,7 @@
 /**
  * @since 2.0
  * Adds PCS_Widget widget.
+ * @version 2.0.1
  */
 class PCS_Widget extends WP_Widget {
 
@@ -174,14 +175,14 @@ class PCS_Widget extends WP_Widget {
 			<?php 
 			foreach ($acs as $ckey => $cvalue) {
 				foreach ($cvalue as $ck => $cv) {
+					$cckey = $ckey."$".$cv->slug;
 					?>
-					<option value="<?php echo $cv->slug; ?>" <?php if(in_array( $cv->slug, $categories )  ) echo "selected"; ?>>
-					<?php echo $cv->slug; ?>
+					<option value="<?php echo $cckey; ?>" <?php if(in_array( $cckey, $categories )  ) echo "selected"; ?>>
+					<?php echo $cv->slug." ( ".$ckey." )"; ?>
 					</option>
 					<?php
 				}
-				?>
-			<?php } ?>
+			} ?>
 		</select>
 		</p>
 		<p>

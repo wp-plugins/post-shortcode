@@ -1,10 +1,10 @@
 === Plugin Name ===
-Contributors: (sachin8600)
+Contributors: sachin8600
 Donate link: 
-Tags: post, custom-post, widget, shortcode, category-post
+Tags: post, custom-post, post-widget, post-shortcode, custom-taxonomy, category
 Requires at least: 3.4.1
 Tested up to: 4.2.2
-Stable tag: 2.0.0
+Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -107,10 +107,7 @@ customfield= //default customfield is empty
 * List versions from most recent at top to oldest at bottom.
 
 == Upgrade Notice ==
-= 1.0.1 =
+= 2.0.1 =
+Solving bug about category and excerpt.
+= 2.0.0 =
 This change of whole plugin its like new plugin with same name.
-= 1.0 =
-Upgrade notices describe the reason a user should upgrade.  No more than 300 characters.
-
-= 0.5 =
-This version fixes a security related bug.  Upgrade immediately.

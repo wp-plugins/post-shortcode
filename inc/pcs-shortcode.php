@@ -1,6 +1,6 @@
 <?php 
 /**
-* @since 2.0
+* @since 2.0.0
 * Add shortcode
 */
 function pcs_func( $atts ) {
@@ -25,25 +25,45 @@ function pcs_func( $atts ) {
 add_shortcode( 'pcs', 'pcs_func' ); 
 
 /**
+* @version 2.0.1
 * get output of post query
 */
 function pcs_get_post_output($a){
+    //global $wpdb;
     extract($a);
     $args['post_type'] = explode(",", $posttype); 
     $args['post_status'] = array( 'publish' );
     $args['posts_per_page'] = $postcount;
     $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
     $args['paged'] = $paged;
-    if(!empty($categories)) $args['category_name'] = $categories;
+    if(!empty($categories)):
+    $acat = explode(",", $categories);
+    foreach ($acat as $catkey => $catvalue) {
+        $actt = explode("$", $catvalue);
+        $ctkey = $actt[0];
+        $ctvalue = $actt[1];
+        $afctt[$ctkey][] = $ctvalue;
+    }
+    foreach ($afctt as $afckey => $afcvalue) {
+        $tax[] = array(
+                'taxonomy' => $afckey,
+                'field'    => 'slug',
+                'terms'    => $afcvalue,
+            );
+    }
+    $tax_query = array(
+            'relation' => 'OR',
+            $tax
+        );
+    $args['tax_query'] = $tax_query;
+    endif;
     $args['orderby'] = $orderby;
 	$args['order']   = $order;
     $ashowfield =explode(",", $showfield);
-    function pcs_excerpt_length( $length ) {
-    return $expertlength;
-    }
-    add_filter( 'excerpt_length', 'pcs_excerpt_length', 999 );
-    //echo "<pre>"; print_r($args); die;
+    add_filter( 'excerpt_length', function( $length ) { return $expertlength; }, 999 );
+    //echo "<pre>"; print_r($args);
 	query_posts($args);
+    //echo $wpdb->last_query;
 	// The Loop
     if ( have_posts() ) :
 	    ob_start();
