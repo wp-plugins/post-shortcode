@@ -59,10 +59,6 @@ check https://codex.wordpress.org/Class_Reference/WP_Query in that page find ord
 order=ASC //default order
 check https://codex.wordpress.org/Class_Reference/WP_Query in that page find order
 
-=  categories =
- categories= //default null is empty
-check https://codex.wordpress.org/Class_Reference/WP_Query in that page find  category_name
-
 
 = postcount =
 postcount= 3//default postcount
