@@ -10,14 +10,17 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 This plugin is used for display posts in widget as well as shortcode.
 
+
 == Description ==
 
 This plugin is used for display posts in widget as well as shortcode.
 
-This plugin is used to display post with display selctor, post type selector, category selector .
-
-A few notes about the sections above:
-
+Display post shortcode
+Display post widget
+Customize display output without editing plugin
+Display post as well as custome post type
+Display post with perticuler taxonomy, term, category, tag
+Display post with selection of display like: title, image, category, tag 
 *   "Contributors" sachin8600
 *   "Tags" post, custom-post, widget, shortcode, category-post
 *   "Requires at least" 3.4.1
@@ -91,9 +94,11 @@ customfield= //default customfield is empty
 3. This screen backend shortcode generator and customization to screenshot-3.png
 
 == Changelog ==
-= 1.0.1 =
+= 2.0.0 =
 * A change of whole plugin .
 * Another change.
+= 2.0.1 =
+Solving bug about category and excerpt.
 
 = 1.0 =
 * A change since the previous version.
