@@ -16,15 +16,25 @@ This plugin is used for display posts in widget as well as shortcode.
 This plugin is used for display posts in widget as well as shortcode.
 
 Display post shortcode
+
 Display post widget
+
 Customize display output without editing plugin
+
 Display post as well as custome post type
+
 Display post with perticuler taxonomy, term, category, tag
-Display post with selection of display like: title, image, category, tag 
+
+Display post with selection of display like: title, image, category, tag
+
 *   "Contributors" sachin8600
+
 *   "Tags" post, custom-post, widget, shortcode, category-post
+
 *   "Requires at least" 3.4.1
+
 *   "Tested up to" 4.2.2
+
 
 
 == Installation ==
