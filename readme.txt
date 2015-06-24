@@ -104,18 +104,18 @@ customfield= //default customfield is empty
 3. This screen backend shortcode generator and customization to screenshot-3.png
 
 == Changelog ==
+
+= 2.0.1 =
+Solving bug about category and excerpt.
+
 = 2.0.0 =
 * A change of whole plugin .
 * Another change.
-= 2.0.1 =
-Solving bug about category and excerpt.
 
 = 1.0 =
 * A change since the previous version.
 * Change add weidget and shortcode of post type and category.
 
-= 0.5 =
-* List versions from most recent at top to oldest at bottom.
 
 == Upgrade Notice ==
 = 2.0.1 =
